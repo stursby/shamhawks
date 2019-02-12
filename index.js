@@ -12,7 +12,7 @@ module.exports = async function (req, res) {
     })
     const page = await browser.newPage()
     await page.setViewport({ width: 1280, height: 960 })
-    page.goto(URL, { waitUntil: 'networkidle2' })
+    await page.goto(URL, { waitUntil: 'networkidle2' })
     await page.waitForSelector('.DnnModule-SiPlayCmsSchedule')
     await page.click('.current-cal-view')
     await page.click('[data-calendar-view="year"]')
