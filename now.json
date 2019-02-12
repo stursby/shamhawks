@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "alias": "shamhawks.now.sh",
   "builds": [
     {
       "src": "api/*.js",
