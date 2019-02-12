@@ -2,20 +2,28 @@
   "version": 2,
   "builds": [
     {
-      "src": "index.js",
+      "src": "api/*.js",
       "use": "@now/node",
       "config": {
         "maxLambdaSize": "40mb"
       }
+    },
+    {
+      "src": "www/package.json",
+      "use": "@now/static-build"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "index.js",
+      "src": "/api",
+      "dest": "/api/index.js",
       "headers": {
         "Cache-Control": "s-maxage=3600"
       }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/www/$1"
     }
   ]
 }
