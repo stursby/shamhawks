@@ -9,7 +9,7 @@
     "now-build": "yarn build"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "nuxt": "^2.4.3"
   },
   "prettier": {
